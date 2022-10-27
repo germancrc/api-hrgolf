@@ -1,7 +1,7 @@
-import * as servicesServices from "../services/services.services.js"
+import * as servicesService from "../services/services.service.js"
 
 export const getServices = (req, res) => {
-    servicesServices
+    servicesService
     .getServices()
     .then((result) => {
         res.status(200).json({
@@ -16,7 +16,7 @@ export const getServices = (req, res) => {
 
 export const getService = (req, res) => {
     const {id} = req.params;
-    servicesServices
+    servicesService
     .getService(id)
     .then((result) => {
         res.status(200).json({
@@ -31,7 +31,7 @@ export const getService = (req, res) => {
 
 export const createService = (req, res) => {
     const servicio = req.body;
-    servicesServices
+    servicesService
     .createService(servicio)
     .then(() => {
         res.status(200).json({
@@ -47,7 +47,7 @@ export const createService = (req, res) => {
 export const updateService = (req, res) => {
     const servicio = req.body;
     const {id} = req.params;
-    servicesServices
+    servicesService
     .updateService(id, servicio)
     .then(() => {
         res.status(200).json({
@@ -63,7 +63,7 @@ export const updateService = (req, res) => {
 
 export const deleteService = (req, res) => {
     const {id} = req.params;
-    servicesServices
+    servicesService
     .deleteService(id)
     .then(() => {
         res.status(200).json({

@@ -1,5 +1,6 @@
 import { Router } from "express";
 import servicesRouter from "./services.route.js";
+import ratesRouter from "./rates.route.js";
 
 const indexRouter = Router();
 
@@ -10,6 +11,7 @@ indexRouter.get(prefix, (req, res) => {
 });
 
 indexRouter.use(`${prefix}/servicios`,  servicesRouter);
+indexRouter.use(`${prefix}/tarifas`,  ratesRouter);
 
 
 

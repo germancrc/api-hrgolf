@@ -1,12 +1,39 @@
 GET http://localhost:3000/api/servicios HTTP/1.1
 
 ###
+GET http://localhost:3000/api/tarifas HTTP/1.1
+
+###
+GET https://hrgolf.onrender.com/api/servicios/ HTTP/1.1
+
+###
 
 GET http://localhost:3000/api/servicios/3 HTTP/1.1
 
+###
+GET http://localhost:3000/api/tarifas/3 HTTP/1.1
 
 ###
 POST http://localhost:3000/api/servicios HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "Para eliminar",
+    "precio": "500",
+    "descripcion": "Borrame" 
+}
+
+###
+POST http://localhost:3000/api/tarifas HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "Caddies",
+    "precio": "35"
+}
+
+###
+POST https://hrgolf.onrender.com/api/servicios/ HTTP/1.1
 Content-Type: application/json
 
 {
