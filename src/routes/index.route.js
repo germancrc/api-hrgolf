@@ -10,6 +10,10 @@ indexRouter.get(prefix, (req, res) => {
     res.send("BIENVENIDO");
 });
 
+indexRouter.get("/", (req, res) => {
+    res.render('index');
+});
+
 indexRouter.use(`${prefix}/servicios`,  servicesRouter);
 indexRouter.use(`${prefix}/tarifas`,  ratesRouter);
 
