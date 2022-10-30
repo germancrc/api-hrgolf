@@ -4,16 +4,14 @@ import ratesRouter from "./rates.route.js";
 
 const indexRouter = Router();
 
-indexRouter.get("/api", (req, res) => {
+const prefix = "/api";
+
+indexRouter.get(prefix, (req, res) => {
     res.send("BIENVENIDO");
 });
 
-indexRouter.get("/", (req, res) => {
-    res.render('index');
-});
-
-indexRouter.use(`api/servicios`,  servicesRouter);
-indexRouter.use(`api/tarifas`,  ratesRouter);
+indexRouter.use(`${prefix}/servicios`,  servicesRouter);
+indexRouter.use(`${prefix}/tarifas`,  ratesRouter);
 
 
 

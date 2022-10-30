@@ -14,9 +14,9 @@ app.use(express.json());
 
 
 //rutas
-app.use("/api", indexRouter);
-app.use("/", (req, res) => {
-    res.render('index');
+app.use("/", indexRouter);
+app.use("*", (req, res) => {
+    res.send("404 - Not Found")
 })
 
 
